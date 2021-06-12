@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alpha Malnutrition Testing Site </title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="{{ url_for('index') }}">Alpha</a> Malnutrition Testing Site</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{{ url_for('index') }}">Home</a></li>
+							<!-- <li>
+								<a href="#" class="icon solid fa-angle-down">Layouts</a>
+								<ul>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" class="button">Sign Up</a></li> -->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Alpha</h2>
+					<p>Malnutrition Testing Site For Children Under The Age Of 6.</p>
+					<ul class="actions special">
+						<!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
+						<li><a href="{{ url_for('learn') }}" class="button">Learn More</a></li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Introducing the ultimate mobile app
+							<br />
+							diagnosing malnutrition in children</h2>
+							<p>Hi! I am Dr.Jephtah, I am here to help your child's health better.For that you'll have to answer a few questions about your conditions<br />
+								Please tick all the conditions the child has <br>
+								Do you feel any of the following symptoms.</p>
+						</header>
+						<!-- <span class="image featured"><img src="//static/images/pic01.jpg" alt="" /></span> -->
+                        <!-- <div class="box"> -->
+                            <!-- <span class="image featured"><img src="/static/images/pic01.jpg" alt="" /></span> -->
+                            <!-- <h3>This is a subheading</h3>
+                            <p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+                            <div class="row">
+                                <div class="row-6 row-12-mobilep">
+                                    <h3>And now a subheading</h3>
+                                    <p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
+                                </div>
+                                <div class="row-6 row-12-mobilep">
+                                    <h3>And another subheading</h3>
+                                    <p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p> -->
+                    </section>
+                </section>  
+                                    <form action="{{ url_for('index') }}" method="post" name="frmSurvey">
+                                        <!-- <input class="checkbox" name="Example-22"  id="p33" style="display: inline-block;"> slight hair -->
+                                        <table>
+                                         
+                                          <tr>
+                                            
+                                            <td ><input type="checkbox" name="slight_hair" value="yes" id="p0"> slight hair</td>
+                                            <td><input type="checkbox" name="reddish_hair" value="yes" id="p1"> reddish hair</td>
+                                            <td><input type="checkbox" name="hair_falling" value="yes" id="p2"> hair falling easily</td>
+                                          </tr>
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="abnormal_skin" value="yes" id="p3"> abnormal skin (eg skin shedding, lessions, skin ulcers)</td>
+                                            <td><input type="checkbox" name="swollen_face" value="yes" id="p4"> swollen face</td>
+                                            <td><input type="checkbox" name="glazed_eyes" value="yes" id="p5"> glazed eyes</td>
+                                          </tr>
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="apathetic" value="yes" id="p6"> child is apathetic</td>
+                                            <td><input type="checkbox" name="smaller_muscles" value="yes" id="p7"> smaller muscles</td>
+                                            <td><input type="checkbox" name="anaemic" value="yes" id="p8"> anaemic (weak/tired)</td>
+                                          </tr>
+                                
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="diarrhoea" value="yes" id="p9"> diarrhoea</td>
+                                            <td><input type="checkbox" name="bloated_stomach" value="yes" id="p10"> bloated stomach</td>
+                                            <td><input type="checkbox" name="thin_body" value="yes" id="p11"> thin body</td>
+                                          </tr>
+                                        
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="older_face" value="yes" id="p12"> face looks older</td>
+                                            <td><input type="checkbox" name="cranky_child" value="yes" id="p13"> cranky child</td>
+                                            <td><input type="checkbox" name="wrinkled_skin" value="yes" id="p14"> wrinkled skin</td>
+                                          </tr>
+                                
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="little_fattie_tissue" value="yes" id="p15"> Liitle fattie tissue on hips and others</td>
+                                            <td><input type="checkbox" name="converse_stomach_rib_prominent" value="yes" id="p16"> converse stoamch rib prominent</td>
+                                            <td><input type="checkbox" name="chronic_infections" value="yes" id="p17"> repeated chronic infections</td>
+                                          </tr>
+                                          <tr>
+                                           
+                                            <td><input type="checkbox" name="skin_reddish_purging" value="yes" id="p18"> Skin reddish or purging</td>
+                                            <td><input type="checkbox" name="age" value="yes" id="p19"> Is age below 2 years</td>
+                                            
+                                          </tr>
+                                
+                                        </table>
+
+										<input type="hidden" name="slight_hair" value="no" id="pp0"> 
+										<input type="hidden" name="reddish_hair" value="no" id="pp1"> 
+										<input type="hidden" name="hair_falling" value="no" id="pp2"> 
+									  
+									 
+										<input type="hidden" name="abnormal_skin" value="no" id="pp3"> 
+										<input type="hidden" name="swollen_face" value="no" id="pp4"> 
+										<input type="hidden" name="glazed_eno" value="no" id="pp5"> 
+									 
+									   
+										<input type="hidden" name="apathetic" value="no" id="pp6"> 
+										<input type="hidden" name="smaller_muscles" value="no" id="pp7"> 
+										<input type="hidden" name="anaemic" value="no" id="pp8"> 
+									 
+										<input type="hidden" name="diarrhoea" value="no" id="pp9"> 
+										<input type="hidden" name="bloated_stomach" value="no" id="pp10"> 
+										<input type="hidden" name="thin_body" value="no" id="pp11"> 
+									 
+										<input type="hidden" name="older_face" value="no" id="pp12"> 
+										<input type="hidden" name="cranky_child" value="no" id="pp13"> 
+										<input type="hidden" name="wrinkled_skin" value="no" id="pp14"> 
+									  
+
+										<input type="hidden" name="little_fattie_tissue" value="no" id="pp15"> 
+										<input type="hidden" name="converse_stomach_rib_prominent" value="no" id="pp16"> 
+										<input type="hidden" name="chronic_infections" value="no" id="pp17"> 
+									  									   
+										<input type="hidden" name="skin_reddish_purging" value="no" id="pp18"> 
+										<input type="hidden" name="age" value="no" id="pp19"> 
+										
+
+
+
+                                                     <!-- <button type="submit" value="Submit answers"></button> -->
+													 <section id="cta">
+
+														<h2>Click the button below to submit your answers</h2>
+														<p>Make sure you have ticked all the symptoms and characteristics that the child has.</p>
+									
+														<div class="row gtr-50 gtr-uniform" justify-content:center; display:flex;>
+															<!-- <div class="col-8 col-12-mobilep">
+																<input type="email" name="email" id="email" placeholder="Email Address" />
+															</div> -->
+															<div class="col-8 col-12-mobilep" >
+																<!-- <button><a href="results.html" input type="submit" value="Submit Answers" class="fit" ></a></button> -->
+																<a href="{{ url_for('results') }}"><input type="submit" value="Submit Answers" class="fit"  onclick="myFunction"  /></a>
+																<!-- <input type="submit" value="Submit Answers" class="fit"   /> -->
+															</div>
+														</div>
+									
+													</section>		 
+                                      </form>
+                                <!-- </div>
+                             -->
+                        
+					
+                
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">Jephtah</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='/assets/js/main.js') }}"></script>
+
+		<script>
+			function check() {
+				document.querySelectorAll('input[type=checkbox]').checked='yes';
+				// document.querySelectorAll('input[type=checkbox]').unchecked='no'
+			}
+		</script>
+		<script>
+			function myFunction() {
+				window.location.href="{{ url_for('results') }}";
+			}
+		</script>
+
+	</body>
+</html>
