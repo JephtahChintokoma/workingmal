@@ -3,9 +3,7 @@ from experta import *
 
 app = Flask(__name__) # Flask Instance
 
-# import os
 
-# print(os.getcwd())
 
 diseases_list = []
 diseases_symptoms = []
@@ -61,14 +59,6 @@ def if_not_matched(disease):
     id_disease = disease
     disease_details = get_details(id_disease)
     treatments = get_treatments(id_disease)
-    print("")
-    print("The most probable disease that you have is %s\n" %(id_disease))
-    print("A short description of the disease is given below :\n")
-    print(disease_details+"\n")
-    print("The common treatments recommended by experts are: \n")
-    print(treatments+"\n")
-
-    # results.append('guinea')
 
     result["2"] = f"The most probable disease that you have is {id_disease}"
     result["3"] = f"A short description of the disease is given  : {disease_details}"
@@ -86,12 +76,6 @@ class Greetings(KnowledgeEngine):
 
     @DefFacts()
     def _initial_action(self):
-        print("")
-        print("Hi! I am Dr.Jephtah, I am here to help you make your health better.")
-        print("For that you'll have to answer a few questions about your conditions")
-        print("Do you feel any of the following symptoms:")
-        print("")
-
 
         yield Fact(action="find_disease")
 
@@ -210,13 +194,6 @@ class Greetings(KnowledgeEngine):
         id_disease = disease
         disease_details = get_details(id_disease)
         treatments = get_treatments(id_disease)
-        print("")
-        print("The most probable disease that you have is %s\n" %(id_disease))
-        print("A short description of the disease is given below :\n")
-        print(disease_details+"\n")
-        print("The common treatments recommended by experts are: \n")
-        print(treatments+"\n")
-
 
         result["2"] = f"The most probable disease that you have is {id_disease}"
         result["3"] = f"A short description of the disease is given below : {disease_details}"
@@ -229,14 +206,6 @@ class Greetings(KnowledgeEngine):
         id_disease = disease
         disease_details = get_details(id_disease)
         treatments = get_treatments(id_disease)
-        print("")
-        print("The most probable disease that you have is %s\n" %(id_disease))
-        print("A short description of the disease is given below :\n")
-        print(disease_details+"\n")
-        print("The common treatments recommended by experts are: \n")
-        print(treatments+"\n")
-
-    # results.append('guinea')
 
         result["2"] = f"The most probable disease that you have is {id_disease}"
         result["3"] = f"A short description of the disease is given : {disease_details}"
@@ -287,8 +256,6 @@ class Greetings(KnowledgeEngine):
 
 
 
-
-
 engine = Greetings() # Knowledge Engine Instance
 
 @app.route("/", methods=(("GET", "POST")))
@@ -318,7 +285,7 @@ def index():
         skin_reddish_purging = request.form.get("skin_reddish_purging")
         age=request.form.get("age")
 
-    # engine.reset()  # Instantiate Initial Fact
+        engine.reset()  # Instantiate Initial Fact
         engine.run()
 
 
