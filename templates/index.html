@@ -80,7 +80,7 @@
                                     <p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p> -->
                     </section>
                 </section>  
-                                    <form action="{{ url_for('index') }}" method="post" name="frmSurvey">
+                                    <form id="booking" action="{{ url_for('index') }}" method="post" name="frmSurvey">
                                         <!-- <input class="checkbox" name="Example-22"  id="p33" style="display: inline-block;"> slight hair -->
                                         <table>
                                          
@@ -177,7 +177,7 @@
 															</div> -->
 															<div class="col-8 col-12-mobilep" >
 																<!-- <button><a href="results.html" input type="submit" value="Submit Answers" class="fit" ></a></button> -->
-																<a href="{{ url_for('results') }}"><input type="submit" value="Submit Answers" class="fit"  onclick="myFunction"  /></a>
+																<a href="{{ url_for('results') }}"><input type="submit" value="Submit Answers" class="fit"  onclick="myFunction" id="submit" /></a>
 																<!-- <input type="submit" value="Submit Answers" class="fit"   /> -->
 															</div>
 														</div>
@@ -227,6 +227,21 @@
 				window.location.href="{{ url_for('results') }}";
 			}
 		</script>
+
+<script>
+	$(function(){
+	$("#submit").click(function(e){
+
+			var number_of_checked_checkbox= $("input[type=checkbox]:checked").length;
+			if(number_of_checked_checkbox==0){
+				alert("select/click at least one symptyom ");
+			}else{
+				$("#booking").submit();
+			}
+
+				});
+			});
+</script>
 
 	</body>
 </html>
