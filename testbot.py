@@ -263,7 +263,7 @@ def index():
     preprocess()
     global slight_hair, reddish_hair, hair_falling, abnormal_skin, swollen_face, glazed_eyes, apathetic, smaller_muscles, anaemic, diarrhoea, bloated_stomach, thin_body,older_face, cranky_child,wrinkled_skin ,little_fattie_tissue ,converse_stomach_rib_prominent ,chronic_infections, skin_reddish_purging, age
     if request.method == "POST":
-        # engine.reset()
+        engine.reset()
         slight_hair = request.form.get("slight_hair")
         reddish_hair = request.form.get("reddish_hair")
         hair_falling = request.form.get("hair_falling")
@@ -285,7 +285,7 @@ def index():
         skin_reddish_purging = request.form.get("skin_reddish_purging")
         age=request.form.get("age")
 
-        engine.reset()  # Instantiate Initial Fact
+        # engine.reset()  # Instantiate Initial Fact
         engine.run()
 
 

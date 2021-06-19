@@ -178,7 +178,7 @@
 															</div> -->
 															<div class="col-8 col-12-mobilep" >
 																<!-- <button><a href="results.html" input type="submit" value="Submit Answers" class="fit" ></a></button> -->
-																<input type="button" value="Submit Answers" class="fit"   id="submit"/>
+																<input type="submit" value="Submit Answers" class="fit"   id="submit" onsubmit="myFunction()"/>
 																<!-- <input type="submit" value="Submit Answers" class="fit"   /> -->
 																<!-- <a href="{{ url_for('results') }}"></a> -->
 															</div>
@@ -218,17 +218,13 @@
 			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
 			<script src="{{ url_for('static', filename='/assets/js/main.js') }}"></script>
 
-		<!-- <script>
+		 <script>
 			function check() {
 				document.querySelectorAll('input[type=checkbox]').checked='yes';
 				// document.querySelectorAll('input[type=checkbox]').unchecked='no'
-			}
+			} 
 		</script>
-		<script>
-			function myFunction() {
-				window.location.href="{{ url_for('results') }}";
-			}
-		</script> -->
+
 
 		<script>
 			$(function(){
@@ -237,15 +233,21 @@
 					var number_of_checked_checkbox= $("input[type=checkbox]:checked").length;
 					if(number_of_checked_checkbox < 3){
 						alert("select/click at least 3 symptoms ");
-						window.location.href="{{ url_for('index') }}";
+						e.preventDefault();
 					}else{
 						$("#booking").submit();
-						window.location.href="{{ url_for('results') }}";
+						myFunction();
+						// window.location.href="{{ url_for('results') }}";
 					}
 
 						});
 					});
 		</script>
 
+	<script>
+		function myFunction() {
+			window.location.href="{{ url_for('results') }}";
+		}
+	</script> 
 	</body>
 </html>
